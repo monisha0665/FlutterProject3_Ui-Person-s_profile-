@@ -1,31 +1,34 @@
-# Contact List UI (Flutter)
+# Profile Portfolio UI (Flutter)
 
-A simple Flutter app that shows a **Contact List** screen.
+A Flutter UI-only application that shows a **profile card** and an **Interests** section.
 
 ## Screenshot
 
 <p align="center">
-  <img src="assets/image2.png" alt="Contact List UI" width="300">
+  <img src="assets/image3.png" alt="Profile Portfolio UI" width="300">
 </p>
 
 ## Features
 
-- App bar with centered title **Contact List**
-- Two input fields (Name and Number) using `TextFormField`
-- Full-width **Add** button using `ElevatedButton`
-- Scrollable list of contacts using `ListView.builder`, `Card` and `ListTile`
-- Person icon on the left and a call icon on the right of every contact
+- Profile section with image, name, subtitle, bio and contact info
+- **Follow** and **Message** buttons
+- **Interests** section with two cards (Travel and Photography)
+- Each card has an image, title, short description and a **View More** button
+- Reusable `InterestCard` widget to avoid repeated code
+- Network images, so no extra assets are required for the app itself
 
 ## Widgets Used
 
 | Widget | Purpose |
 |--------|---------|
-| `Scaffold` / `AppBar` | Basic page structure and title bar |
-| `TextFormField` | Name and phone number input |
-| `ElevatedButton` | Add button |
-| `Card` | Contact item background |
-| `ListTile` | Contact name, number and icons |
-| `ListView.builder` | Scrollable contact list |
+| `Scaffold` / `AppBar` | Page structure and title bar |
+| `SingleChildScrollView` | Prevents overflow on small screens |
+| `Card` | Profile card and interest cards |
+| `CircleAvatar` | Round profile picture |
+| `Row` / `Column` | Layout |
+| `Divider` | Separator lines |
+| `ElevatedButton` / `OutlinedButton` | Follow, Message and View More buttons |
+| `Image.network` | Card images |
 
 
 ## Author
